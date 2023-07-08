@@ -17,8 +17,21 @@ return require('packer').startup(function(use)
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'nvim-treesitter/nvim-treesitter-context'
+    use('nvim-treesitter/nvim-treesitter')
+    use('nvim-treesitter/nvim-treesitter-context')
+    use('folke/tokyonight.nvim')
+
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
 
     use {
         'VonHeikemen/lsp-zero.nvim',
