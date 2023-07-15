@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter-context')
     use('folke/tokyonight.nvim')
 
+    use("nvim-tree/nvim-tree.lua")
+    use("nvim-tree/nvim-web-devicons")
+
     use({
         "utilyre/barbecue.nvim",
         tag = "*",
